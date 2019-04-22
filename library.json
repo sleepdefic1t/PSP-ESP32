@@ -1,0 +1,31 @@
+{
+    "name": "ARK-CPP-PSP-ESP32",
+    "keywords": "ark ecosystem, crypto, blockchain, iot, arduino, esp32, psp, platform, support, package",
+    "description": "A simple C++ Platform Support Package (PSP) for the ESP32 and the ARK Ecosystem.",
+    "homepage": "https://github.com/ArkEcosystem/PSP-ESP32",
+    "repository": {
+      "type": "git",
+      "url": "https://github.com/ArkEcosystem/PSP-ESP32.git"
+    },
+    "version": "0.0.1",
+    "authors": [
+      {
+        "name": "Ark Ecosystem",
+        "email": "info@ark.io",
+        "url": "https://github.com/ArkEcosystem"
+      }
+    ],
+    "frameworks": "arduino",
+    "platforms": "*",
+    "dependencies": [
+      {
+        "name": "micro-ecc"
+      }
+    ],
+    "build": {
+      "flags": [
+        "-I src/lib"
+      ]
+    }
+  }
+  
