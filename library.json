@@ -24,7 +24,10 @@
     ],
     "export": {
       "include": [
-        "src/*"
+        "src/*",
+        "*.md",
+        "*.json",
+        "LICENSE"
       ]
     },
     "build": {
