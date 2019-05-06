@@ -24,7 +24,7 @@
     ],
     "export": {
       "exclude": [
-        "test/*"
+        "test"
       ]
     },
     "build": {
