@@ -23,8 +23,17 @@
       }
     ],
     "export": {
+      "include": [
+        "src/*",
+        "*.md",
+        "*.json",
+        "*.properties",
+        "LICENSE",
+        "*.ini"
+      ],
       "exclude": [
-        "test/*"
+        "test/*.cpp",
+        "test/*.ini"
       ]
     },
     "build": {
