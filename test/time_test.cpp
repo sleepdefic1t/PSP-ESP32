@@ -12,7 +12,7 @@ test(time_epoch) {
 }
 
 test(time_now) {
-  configTime(timezone, dstOffsetSeconds, server);
+  configTime(0, 0, "pool.ntp.org");
     assertMore(
         Ark::Platform::Time::Now(),
         1548725761ull); // (28 Jan 2019(in seconds))

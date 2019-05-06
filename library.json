@@ -22,6 +22,11 @@
         "name": "micro-ecc"
       }
     ],
+    "export": {
+      "exclude": [
+        "test/*"
+      ]
+    },
     "build": {
       "flags": [
         "-I src/lib"
