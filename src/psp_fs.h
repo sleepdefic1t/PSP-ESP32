@@ -1,5 +1,5 @@
 /**
- * This file is part of Ark Cpp Platform Support Packages.
+ * This file is part of ARK Cpp Platform Support Packages.
  *
  * (c) Ark Ecosystem <info@ark.io>
  *
