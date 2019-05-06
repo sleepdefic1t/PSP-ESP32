@@ -24,7 +24,8 @@
     ],
     "export": {
       "exclude": [
-        "test"
+        "test/*.cpp",
+        "test/*.ini"
       ]
     },
     "build": {
