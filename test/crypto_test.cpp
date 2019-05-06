@@ -18,6 +18,7 @@ std::vector<uint8_t> PrivateKeyTestBytes = {
 
 // PublicKeyTestBytes
 // PublicKey Hex: '034151a3ec46b5670a682b0a63394f863587d1bc97483b1b6c70eb58e7f0aed192'
+// uncompressed: '044151a3ec46b5670a682b0a63394f863587d1bc97483b1b6c70eb58e7f0aed192fa29ce00fb8ed92f34f68c0018f12d5b68c1609080abaf331746d6d86c6039e5'
 // 33 bytes
 std::vector<uint8_t> PublicKeyTestBytes = {
     3,
@@ -58,7 +59,7 @@ std::vector<uint8_t> RValueTestBytes = {
 };
 //
 // SValueTestBytes
-// Expected unencoded S-Value: 0fb4adddd1f1d652b544ea6ab62828a0a65b712ed447e2538db0caebfa68929e
+// Expected unencoded S-Value: 5ecb2e1c63b29879c2ecf1255db506d671c8b3fa6017f67cfd1bf07e6edd1cc8
 // 32 bytes
 std::vector<uint8_t> SValueTestBytes = {
      94, 203,  46,  28,  99, 178, 152, 121,
