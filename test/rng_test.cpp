@@ -1,4 +1,4 @@
-#include <AUnit.h>
+#include "gtest/gtest.h"
 
 #include "psp_rng.h"
 
@@ -32,17 +32,17 @@ std::vector<uint8_t> NonceTestBytes = {
   240,  16, 239, 185, 127,  86,  15, 200
 };
 
-test(rng_nonce) {
+TEST(rng, nonce) {
   std::vector<uint8_t> byteBuffer(32);
   Ark::Platform::RNG::Nonce(
       &MessageHashTestBytes[0],
       &PrivateKeyTestBytes[0],
       &byteBuffer[0]);
 
-  assertTrue(NonceTestBytes == byteBuffer);
+  ASSERT_TRUE(NonceTestBytes == byteBuffer);
 }
 
-test(rng_random_bytes) {
+TEST(rng, random_bytes) {
   // This is not a proper test for randomness.
   // this section instead tests that 3 independently-
   // created byte-buffers do not match and don't repeat values excessively.
@@ -57,7 +57,7 @@ test(rng_random_bytes) {
       byteBuffer1 == byteBuffer2
       || byteBuffer1 == byteBuffer3
       || byteBuffer2 == byteBuffer3;
-  assertFalse(bytesMatch);
+  ASSERT_FALSE(bytesMatch);
 
   int matchedBytes = 0;
   int repeatedBytes = 0;
@@ -79,5 +79,5 @@ test(rng_random_bytes) {
 
   // sometimes a value may repeat or exist in the same position in another vector.
   int threshold = 5; 
-  assertLess(matchedBytes + repeatedBytes, threshold);  
+  ASSERT_LT(matchedBytes + repeatedBytes, threshold);  
 }
